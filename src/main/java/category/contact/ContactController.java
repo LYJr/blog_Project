@@ -21,8 +21,9 @@ public class ContactController {
         return "redirect:/contactInput";
     }
 
-    @GetMapping("")
+    @GetMapping("/contactInput")
     public String contactInput(Model model){
+        System.out.println("수정화면 이동");
         model.addAttribute("input",contactRepository.findAll());
         return "/category/contact";
     }
