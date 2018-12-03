@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/abouts")
 public class AboutController {
 
-    @GetMapping("")
-    public String about(){
-        return "/category/about";
-    }
+//    @GetMapping("")
+//    public String about(){
+//        return "/category/about";
+//    }
 }
