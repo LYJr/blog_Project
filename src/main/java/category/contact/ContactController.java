@@ -16,14 +16,12 @@ public class ContactController {
 
     @PostMapping("")
     public String contact(Contact contact){
-        System.out.println("확인해보자"+ contact);
         contactRepository.save(contact);
-        return "redirect:/contactInput";
+        return "redirect:/contacts/contactInput";
     }
 
     @GetMapping("/contactInput")
     public String contactInput(Model model){
-        System.out.println("수정화면 이동");
         model.addAttribute("input",contactRepository.findAll());
         return "/category/contact";
     }
