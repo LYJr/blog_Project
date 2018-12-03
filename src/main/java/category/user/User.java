@@ -1,4 +1,4 @@
-package category.login;
+package category.user;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -39,7 +39,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "user{" +
                 "id=" + id +
                 ", userId='" + userId + '\'' +
                 ", password='" + password + '\'' +
