@@ -1,79 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Snipp - Free Bootstrap 4 Template by Colorlib</title>
+  <title>My Diary</title>
+
+  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="/css/swiper.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/index.css">
   <link rel="stylesheet" href="/css/portfolio/animate.css">
-  <link rel="stylesheet" href="/css/portfolio/style.css">
 </head>
 <body>
+
+<div class="outer-container">
+  <header class="site-header">
+    <div class="top-header-bar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 flex align-items-center">
+            <div class="header-bar-text d-none d-lg-block">
+              <p>My love life</p>
+            </div><!-- .header-bar-text -->
+
+            <div class="header-bar-email d-none d-lg-block">
+              <a href="#">lyi91@naver.com</a>
+            </div><!-- .header-bar-email -->
+          </div><!-- .col -->
+
+          <div class="col-12 col-lg-6 flex justify-content-between justify-content-lg-end align-items-center">
+            <div class="header-bar-social d-none d-md-block">
+              <ul class="flex align-items-center">
+                <li><a href="http://ly91.tistory.com/" target="_blank">T</a></li>
+                <li><a href="https://www.slipp.net" target="_blank">S</a></li>
+                <li><a href="https://github.com/LYJr"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="/login"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div><!-- .header-bar-social -->
+
+            <div class="header-bar-search d-none d-md-block">
+              <form>
+                <input type="search" placeholder="Search">
+              </form>
+            </div><!-- .header-bar-search -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .container-fluid -->
+    </div><!-- .top-header-bar -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="site-branding flex flex-column align-items-center">
+            <h1 class="site-title"><a href="/" rel="home">Resian</a></h1>
+            <p class="site-description">Personal Blog</p>
+          </div><!-- .site-branding -->
+
+          <nav class="site-navigation">
+            <div class="hamburger-menu d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div><!-- .hamburger-menu -->
+
+            <ul class="flex-lg flex-lg-row justify-content-lg-center align-content-lg-center">
+              <li class="current-menu-item"><a href="/">Home</a></li>
+              <li><a href="#">features</a></li>
+              <li><a href="/popor">Portfolio</a></li>
+              <li><a href="/blogs">blog</a></li>
+              <li><a href="/abouts">about me</a></li>
+              <li><a href="/contacts/contactInput">Contact</a></li>
+            </ul>
+
+            <div class="header-bar-social d-md-none">
+              <ul class="flex justify-content-center align-items-center">
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div><!-- .header-bar-social -->
+
+            <div class="header-bar-search d-md-none">
+              <form>
+                <input type="search" placeholder="Search">
+              </form>
+            </div><!-- .header-bar-search -->
+          </nav><!-- .site-navigation -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </header><!-- .site-header -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-header flex justify-content-center align-items-center" style="background-image: url('/images/blog-bg.jpg')">
+          <h1>Portflio</h1>
+        </div><!-- .page-header -->
+      </div><!-- .col -->
+    </div><!-- .row -->
 
 <section class="ftco-section">
   <div class="container">
     <div class="row no-gutters justify-content-center mb-5 pb-5">
       <div class="col-md-7 text-center heading-section ftco-animate">
-        <span class="subheading">Works</span>
         <h2 class="mb-4">View our works below to see our design and way of development.</h2>
-        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
       </div>
     </div>
+
     <div class="row">
       <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image" style="background-image: url('images/work-1.jpg'); " data-scrollax=" properties: { translateY: '-20%'}">
-        </a>
-        <div class="text">
-          <h4 class="subheading">Illustration</h4>
-          <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image image-2 order-2" style="background-image: url('images/work-2.jpg');" data-scrollax=" properties: { translateY: '-20%'}"></a>
-        <div class="text order-1">
-          <h4 class="subheading">Application</h4>
-          <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image" style="background-image: url('images/work-3.jpg'); " data-scrollax=" properties: { translateY: '-20%'}"></a>
+        <a href="portfolio.html" class="image" style="background-image: url('/images/portfolio/work-5.jpg'); " data-scrollax=" properties: { translateY: '-20%'}"></a>
         <div class="text">
           <h4 class="subheading">Web Design</h4>
           <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
           <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
+          <p><a href="/single" class="btn btn-primary px-4">View Portfolio</a></p>
         </div>
       </div>
+
       <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image image-2 order-2" style="background-image: url('images/work-4.jpg');" data-scrollax=" properties: { translateY: '-20%'}"></a>
+        <a href="portfolio.html" class="image image-2 order-2" style="background-image: url('/images/portfolio/work-6.jpg');" data-scrollax=" properties: { translateY: '-20%'}"></a>
         <div class="text order-1">
           <h4 class="subheading">Application</h4>
           <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
           <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image" style="background-image: url('images/work-5.jpg'); " data-scrollax=" properties: { translateY: '-20%'}"></a>
-        <div class="text">
-          <h4 class="subheading">Web Design</h4>
-          <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
-        </div>
-      </div>
-      <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-        <a href="portfolio.html" class="image image-2 order-2" style="background-image: url('images/work-6.jpg');" data-scrollax=" properties: { translateY: '-20%'}"></a>
-        <div class="text order-1">
-          <h4 class="subheading">Application</h4>
-          <h2 class="heading"><a href="portfolio.html">Even the all-powerful Pointing has no control</a></h2>
-          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-          <p><a href="portfolio.html" class="btn btn-primary px-4">View Portfolio</a></p>
+          <p><a href="/single" class="btn btn-primary px-4">View Portfolio</a></p>
         </div>
       </div>
     </div>
@@ -96,8 +162,37 @@
   </div>
 </section>
 
+    <div class="footer-bar">
+      <div class="outer-container">
+        <div class="container-fluid">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-6">
+              <div class="footer-copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by<a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </div><!-- .footer-copyright -->
+            </div><!-- .col-xl-4 -->
+
+            <div class="col-12 col-md-6">
+              <div class="footer-social">
+                <ul class="flex justify-content-center justify-content-md-end align-items-center">
+                  <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div><!-- .footer-social -->
+            </div><!-- .col-xl-4 -->
+          </div><!-- .row -->
+        </div><!-- .container-fluid -->
+      </div><!-- .outer-container -->
+    </div><!-- .footer-bar -->
+    </footer><!-- .sit-footer -->
+
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 <script src="/js/portfolio/jquery.min.js"></script>
 <script src="/js/portfolio/jquery-migrate-3.0.1.min.js"></script>
@@ -107,8 +202,13 @@
 <script src="/js/portfolio/owl.carousel.min.js"></script>
 <script src="/js/portfolio/aos.js"></script>
 <script src="/js/portfolio/scrollax.min.js"></script>
-<script src="/js/portfolio/google-map.js"></script>
 <script src="/js/portfolio/main.js"></script>
+
+  <script type='text/javascript' src='/js/jquery.js'></script>
+  <script type='text/javascript' src='/js/jquery-2.2.0.min.js'></script>
+  <script type='text/javascript' src='/js/swiper.min.js'></script>
+  <script type='text/javascript' src='/js/custom.js'></script>
+  <script type='text/javascript' src='/js/scripts.js'></script>
 
 </body>
 </html>
