@@ -25,4 +25,10 @@ public class ContactController {
         model.addAttribute("input",contactRepository.findAll());
         return "/category/contact";
     }
+
+    @GetMapping()
+    public String modify(){
+
+        return "/";
+    }
 }

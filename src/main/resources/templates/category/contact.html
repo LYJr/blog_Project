@@ -41,20 +41,27 @@
 
                 {{#input}}
                 <div class="entry-content">
+                    <p>{{name}}</p>
                     <p>{{messages}}</p>
                 </div><!-- .entry-content -->
-                {{/input}}
-                <div class="contact-page-social">
-                    <ul class="flex align-items-center" style="display:inline-block;">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">»</a></li>
+
+                <div class="article-util">
+                    <ul class="article-util-list">
+                        <li>
+                            <a class="link-modify-article"
+                               href="/questions/413/answers/1405/form">수정</a>
+                        </li>
+                        <li>
+                            <form class="delete-answer-form" action="/questions/{{id}}/answers/{{id}}"
+                                  method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="delete-answer-button">삭제</button>
+                            </form>
+                        </li>
                     </ul>
-                </div><!-- .header-bar-social -->
+                </div>
+
+                {{/input}}
 
                 <form class="contact-form" method="post" action="/contacts">
                     <input type="text" name="name" placeholder="Name">
@@ -62,6 +69,16 @@
                     <textarea rows="18" name="messages" cols="6" placeholder="Messages"></textarea>
                     <input type="submit" value="Read More">
                 </form><!-- .contact-form -->
+
+
+                <div class="pagination">
+                    <ul class="flex align-items-center">
+                        <li class="active">
+                            <a href="#">01.</a></li>
+                        <li><a href="#">02.</a></li>
+                        <li><a href="#">03.</a></li>
+                    </ul>
+                </div>
             </div><!-- .content-wrap -->
         </div><!-- .col -->
 
@@ -125,6 +142,30 @@
     </div><!-- .row -->
 </div><!-- .container -->
 </div><!-- .outer-container -->
+
+
+<script type="text/template" id="contactTemplate">
+    <div class="entry-content">
+        <p>{{name}}</p>
+        <p>{{messages}}</p>
+    </div><!-- .entry-content -->
+
+    <div class="article-util">
+        <ul class="article-util-list">
+            <li>
+                <a class="link-modify-article"
+                   href="/questions/413/answers/1405/form">수정</a>
+            </li>
+            <li>
+                <form class="delete-answer-form" action="/questions/{{id}}/answers/{{id}}"
+                      method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="delete-answer-button">삭제</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</script>
 
 {{/partial}}
 {{> base}}
