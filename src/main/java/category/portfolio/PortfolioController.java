@@ -1,48 +1,61 @@
 package category.portfolio;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
-
 @Controller
-@RequestMapping("/popor")
+@RequestMapping("/portfolio")
 public class PortfolioController {
+
+    private static final Logger logger = LoggerFactory.getLogger(PortfolioController.class);
+    private String uploadDirectory = "c:\\input";
 
     @Autowired
     private PortfolioRepository portfolioRepository;
 
+
     @PostMapping("")
-    public String upDate(HttpServletRequest request,
-                         @RequestParam MultipartFile[] fileUpload, Portfolio portfolio) throws Exception {
+    public String upDate(
+            @RequestParam MultipartFile file, Portfolio portfolio) throws Exception {
 
-        if (fileUpload != null && fileUpload.length > 0) {
-            for (MultipartFile aFile : fileUpload) {
-                portfolio.setFileName(aFile.getOriginalFilename());
-                portfolio.setData(aFile.getBytes());
-                portfolioRepository.save(portfolio);
-            }
-        }
-
+        portfolio.setFileName(file.getOriginalFilename());
+        portfolio.setData(file.getBytes());
         portfolioRepository.save(portfolio);
 
-        return "redirect:/popor/popor-single";
+//        return new Portfolio(fileName, fileDownloadUri);
+
+        return "redirect:/portfolio/portfolio-single";
     }
 
-
-    @GetMapping("/popor-single")
+    @GetMapping("/portfolio-single")
     public String contact(Model model) {
-        model.addAttribute("input" ,portfolioRepository.findAll());
+        //아이디 값에 맞게 진행하라.
+
+        model.addAttribute("input",portfolioRepository.findAll());
 
         return "/category/portfolio-single";
     }
 
-}
+//    @GetMapping("/{id}")
+//    public ResponseEntity<ByteArrayResource> download(@PathVariable long id) throws Exception{
+//
+//        Portfolio a = portfolioRepository.findById(id).orElseGet(null);
+//
+//        ByteArrayResource byteArrayResource = new ByteArrayResource();
+//
+//        HttpHeaders header = new HttpHeaders();
+//        header.setContentType(MediaType.ALL);
+//        header.set(HttpHeaders.CONTENT_DISPOSITION, a.getFileName());
+//
+//    }
 
+}

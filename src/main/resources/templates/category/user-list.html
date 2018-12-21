@@ -1,10 +1,11 @@
 {{#partial "input"}}
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="page-header flex justify-content-center align-items-center"
                  style="background-image: url('/images/contact-bg.jpg')">
-                <h1>Contact</h1>
+                <h1>User List</h1>
             </div><!-- .page-header -->
         </div><!-- .col -->
     </div><!-- .row -->
@@ -29,47 +30,37 @@
         <div class="col-12 col-lg-9">
             <div class="content-wrap">
                 <header class="entry-header">
-                    <h2 class="entry-title">Contact me or just say HI</h2>
-
-                    <div class="tags-links">
-                        <a href="#">#winter</a>
-                        <a href="#">#love</a>
-                        <a href="#">#snow</a>
-                        <a href="#">#january</a>
-                    </div><!-- .tags-links -->
+                    <h2 class="entry-title">User List</h2>
                 </header><!-- .entry-header -->
 
-                {{#input}}
-                <div class="entry-content">
-                    <p>{{name}}</p>
-                    <p>{{messages}}</p>
-                </div><!-- .entry-content -->
-
-                <div class="article-util">
-                    <ul class="article-util-list">
-                        <li>
-                            <a class="link-modify-article"
-                               href="/contacts/{{id}}/modify">수정</a>
-                        </li>
-                        <li>
-                            <form class="delete-answer-form" action="/questions/{{id}}/answers/{{id}}"
-                                  method="POST">
-                                <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="delete-answer-button">삭제</button>
-                            </form>
-                        </li>
-                    </ul>
+                <div class="container" id="main">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="panel panel-default">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>사용자 아이디</th>
+                                    <th>이름</th>
+                                    <th>이메일</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                {{#list}}
+                                <tbody>
+                                <tr>
+                                    <th scope="row">{{id}}</th>
+                                    <td><a href="/users/{{id}}"/>{{userId}}</td>
+                                    <td>{{name}}</td>
+                                    <td>{{email}}</td>
+                                    <td><a href="/users/{{id}}/form" class="btn btn-success" role="button">수정</a></td>
+                                </tr>
+                                </tbody>
+                                {{/list}}
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
-                {{/input}}
-
-                <form class="contact-form" method="post" action="/contacts">
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email">
-                    <textarea rows="18" name="messages" cols="6" placeholder="Messages"></textarea>
-                    <input type="submit" value="Read More">
-                </form><!-- .contact-form -->
-
 
                 <div class="pagination">
                     <ul class="flex align-items-center">
@@ -143,29 +134,6 @@
 </div><!-- .container -->
 </div><!-- .outer-container -->
 
-
-<script type="text/template" id="contactTemplate">
-    <div class="entry-content">
-        <p>{{name}}</p>
-        <p>{{messages}}</p>
-    </div><!-- .entry-content -->
-
-    <div class="article-util">
-        <ul class="article-util-list">
-            <li>
-                <a class="link-modify-article"
-                   href="/questions/413/answers/1405/form">수정</a>
-            </li>
-            <li>
-                <form class="delete-answer-form" action="/questions/{{id}}/answers/{{id}}"
-                      method="POST">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="delete-answer-button">삭제</button>
-                </form>
-            </li>
-        </ul>
-    </div>
-</script>
 
 {{/partial}}
 {{> base}}

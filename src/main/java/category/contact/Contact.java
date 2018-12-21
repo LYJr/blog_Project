@@ -64,4 +64,9 @@ public class Contact {
                 ", messages='" + messages + '\'' +
                 '}';
     }
+
+    public void update(String name, String messages) {
+        this.name = name;
+        this.messages = messages;
+    }
 }

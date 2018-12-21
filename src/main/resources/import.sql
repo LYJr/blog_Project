@@ -1,1 +1,2 @@
-INSERT INTO USER (id, user_id, password) VALUES (1, 'ly91@naver.com', '123');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (1, 'ly91@naver.com','resian','ly91', '123');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (2, 'dwd@naver.com','javajigi','a', '1');
