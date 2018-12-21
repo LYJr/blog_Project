@@ -1,5 +1,7 @@
 package category.contact;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,10 +11,16 @@ import javax.persistence.Id;
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty
     private Long id;
 
+    @JsonProperty
     private String name;
+
+    @JsonProperty
     private String email;
+
+    @JsonProperty
     private String messages;
 
     public Long getId() {
@@ -55,5 +63,10 @@ public class Contact {
                 ", email='" + email + '\'' +
                 ", messages='" + messages + '\'' +
                 '}';
+    }
+
+    public void update(String name, String messages) {
+        this.name = name;
+        this.messages = messages;
     }
 }

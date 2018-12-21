@@ -102,7 +102,7 @@
                                     <div class="comment-wrap">
                                         <div class="comment-author flex flex-wrap align-items-center">
                                             <span class="fn">
-                                                <a href="#">aaaaaaaaaaaa</a>
+                                                <a href="#">{{name}}</a>
                                             </span><!-- .fn -->
 
                                             <span class="comment-meta">
@@ -112,15 +112,16 @@
                                             <div class="reply">
                                                 <a href="#">Reply</a>
                                             </div><!-- .reply -->
+
                                         </div><!-- .comment-author -->
 
                                         <p>{{messages}} </p>
 
                                     </div><!-- .comment-wrap -->
-
                                 </div><!-- .comment-body -->
                             </li><!-- .comment -->
                             {{/input}}
+
                     <div class="comments-form">
                         <div class="comment-respond">
                             <h3 class="comment-reply-title">Leave a reply</h3>
@@ -128,7 +129,7 @@
                             <form class="comment-form" method="post" action="/api/blogs">
                                 <input type="text" name="name"  placeholder="Name">
                                 <input type="email" name="email" placeholder="Email">
-                                <textarea rows="18" cols="6" name="messages" placeholder="Messages"></textarea>
+                                <textarea rows="6" cols="6" name="messages" placeholder="Messages"></textarea>
                                 <input type="submit" value="Read More">
                             </form><!-- .comment-form -->
                         </div><!-- .comment-respond -->
@@ -138,7 +139,6 @@
         </div><!-- .row -->
     </div><!-- .container -->
 </div><!-- .outer-container -->
-
 
 <script type="text/template" id="blogTemplate">
     <div class="comment-body flex justify-content-between">

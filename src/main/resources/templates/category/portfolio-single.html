@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Diary</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- FontAwesome CSS -->
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="/css/swiper.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/index.css">
+
+  <link rel="stylesheet" href="/css/portfolio/animate.css">
+  <link rel="stylesheet" href="/css/portfolio/owl.carousel.min.css">
+</head>
+<body>
+
+<div class="outer-container">
+  <header class="site-header">
+    <div class="top-header-bar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 flex align-items-center">
+            <div class="header-bar-text d-none d-lg-block">
+              <p>My love life</p>
+            </div><!-- .header-bar-text -->
+
+            <div class="header-bar-email d-none d-lg-block">
+              <a href="#">lyi91@naver.com</a>
+            </div><!-- .header-bar-email -->
+          </div><!-- .col -->
+
+          <div class="col-12 col-lg-6 flex justify-content-between justify-content-lg-end align-items-center">
+            <div class="header-bar-social d-none d-md-block">
+              <ul class="flex align-items-center">
+                <li><a href="http://ly91.tistory.com/" target="_blank">T</a></li>
+                <li><a href="https://www.slipp.net" target="_blank">S</a></li>
+                <li><a href="https://github.com/LYJr"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="/login"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div><!-- .header-bar-social -->
+
+            <div class="header-bar-search d-none d-md-block">
+              <form>
+                <input type="search" placeholder="Search">
+              </form>
+            </div><!-- .header-bar-search -->
+          </div><!-- .col -->
+        </div><!-- .row -->
+      </div><!-- .container-fluid -->
+    </div><!-- .top-header-bar -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="site-branding flex flex-column align-items-center">
+            <h1 class="site-title"><a href="/" rel="home">Resian</a></h1>
+            <p class="site-description">Personal Blog</p>
+          </div><!-- .site-branding -->
+
+          <nav class="site-navigation">
+            <div class="hamburger-menu d-lg-none">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div><!-- .hamburger-menu -->
+
+            <ul class="flex-lg flex-lg-row justify-content-lg-center align-content-lg-center">
+              <li class="current-menu-item"><a href="/">Home</a></li>
+              <li><a href="#">features</a></li>
+              <li><a href="/portfolio-list">Portfolio</a></li>
+              <li><a href="/blogs">blog</a></li>
+              <li><a href="/abouts">about me</a></li>
+              <li><a href="/contacts/contactInput">Contact</a></li>
+              <li><a href="/users/list">Members</a></li>
+            </ul>
+
+            <div class="header-bar-social d-md-none">
+              <ul class="flex justify-content-center align-items-center">
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div><!-- .header-bar-social -->
+
+            <div class="header-bar-search d-md-none">
+              <form>
+                <input type="search" placeholder="Search">
+              </form>
+            </div><!-- .header-bar-search -->
+          </nav><!-- .site-navigation -->
+        </div><!-- .col -->
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </header><!-- .site-header -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="page-header flex justify-content-center align-items-center" style="background-image:
+        url('/images/blog-bg.jpg')">
+          <h1>Portflio</h1>
+        </div><!-- .page-header -->
+      </div><!-- .col -->
+    </div><!-- .row -->
+
+<section class="ftco-section ftco-degree-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ftco-animate">
+        {{#input}}
+        <p>
+          <img src="/images/portfolio/work-2.jpg" alt="" class="img-fluid">
+        </p>
+        <h2 class="mb-3">{{id}}.{{title}}</h2>
+        <p>{{messages}}</p>
+        <p>{{fileName}}</p>
+        <p><a href="#" class="btn btn-primary btn-outline-primary py-3 px-5">Download</a></p>
+        {{/input}}
+
+          <form class="contact-form" method="post" enctype="multipart/form-data" action="/portfolio">
+            <textarea rows="3" name="title" cols="3" placeholder="title"></textarea>
+          <textarea rows="18" name="messages" cols="6" placeholder="Messages"></textarea>
+
+            <input type="file" name="fileUpload" size="50">
+            <input type="submit" value="Read More">
+        </form>
+
+        <!-- .contact-form -->
+
+      </div> <!-- .col-md-8 -->
+      <div class="col-md-4 sidebar ftco-animate">
+        <div class="sidebar-box">
+          <form action="#" class="search-form">
+            <div class="form-group">
+              <span class="icon fa fa-search"></span>
+              <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+            </div>
+          </form>
+        </div>
+        <div class="sidebar-box ftco-animate">
+          <div class="categories">
+            <h3>Categories</h3>
+            <li><a href="#">Food <span>(12)</span></a></li>
+            <li><a href="#">Dish <span>(22)</span></a></li>
+            <li><a href="#">Desserts <span>(37)</span></a></li>
+            <li><a href="#">Drinks <span>(42)</span></a></li>
+            <li><a href="#">Ocassion <span>(14)</span></a></li>
+          </div>
+        </div>
+
+        <div class="sidebar-box ftco-animate">
+          <h3>Recent Blog</h3>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(/images/portfolio/image_1.jpg);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              </h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(/images/portfolio/image_2.jpg);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              </h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(/images/portfolio/image_3.jpg);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a>
+              </h3>
+              <div class="meta">
+                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box ftco-animate">
+          <h3>Tag Cloud</h3>
+          <div class="tagcloud">
+            <a href="#" class="tag-cloud-link">dish</a>
+            <a href="#" class="tag-cloud-link">menu</a>
+            <a href="#" class="tag-cloud-link">food</a>
+            <a href="#" class="tag-cloud-link">sweet</a>
+            <a href="#" class="tag-cloud-link">tasty</a>
+            <a href="#" class="tag-cloud-link">delicious</a>
+            <a href="#" class="tag-cloud-link">desserts</a>
+            <a href="#" class="tag-cloud-link">drinks</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section> <!-- .section -->
+
+<div class="footer-bar">
+  <div class="outer-container">
+    <div class="container-fluid">
+      <div class="row justify-content-between">
+        <div class="col-12 col-md-6">
+          <div class="footer-copyright">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by<a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </div><!-- .footer-copyright -->
+        </div><!-- .col-xl-4 -->
+
+        <div class="col-12 col-md-6">
+          <div class="footer-social">
+            <ul class="flex justify-content-center justify-content-md-end align-items-center">
+              <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div><!-- .footer-social -->
+        </div><!-- .col-xl-4 -->
+      </div><!-- .row -->
+    </div><!-- .container-fluid -->
+  </div><!-- .outer-container -->
+</div><!-- .footer-bar -->
+</footer><!-- .sit-footer -->
+
+<!-- loader -->
+
+  <script src="/js/portfolio/jquery.min.js"></script>
+  <script src="/js/portfolio/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/js/portfolio/jquery.waypoints.min.js"></script>
+  <script src="/js/portfolio/jquery.stellar.min.js"></script>
+  <script src="/js/portfolio/owl.carousel.min.js"></script>
+  <script src="/js/portfolio/aos.js"></script>
+  <script src="/js/portfolio/scrollax.min.js"></script>
+  <script src="/js/portfolio/main.js"></script>
+
+<script type='text/javascript' src='/js/jquery.js'></script>
+<script type='text/javascript' src='/js/jquery-2.2.0.min.js'></script>
+<script type='text/javascript' src='/js/swiper.min.js'></script>
+<script type='text/javascript' src='/js/custom.js'></script>
+<script type='text/javascript' src='/js/scripts.js'></script>
+
+  </body>
+</html>

@@ -1,6 +1,6 @@
 package category.portfolio;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PortfolioRepository extends CrudRepository<Portfolio, Long> {
+public interface PortfolioRepository extends JpaRepository<Portfolio, Long> {
 }

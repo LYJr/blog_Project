@@ -37,7 +37,7 @@
 						Login to continue
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<div class="wrap-input100 validate-input" data-validate = "Id is required">
 						<input class="input100" type="text" name="userId">
 						<span class="focus-input100"></span>
 						<span class="label-input100">id</span>
@@ -59,13 +59,13 @@
 						</div>
 
 						<div>
-							<a href="#" class="txt1">
-								Forgot Password?
+							<a href="/form" class="txt1">
+								Would you like to become a member?
 							</a>
 						</div>
 					</div>
 
-					<div class="container-login100-form-btn">
+					<div class="container-login100-form-btn" method="post" action="/users">
 						<button class="login100-form-btn">
 							Login
 						</button>
