@@ -1,2 +1,16 @@
 INSERT INTO USER (id, email, name, user_id, password) VALUES (1, 'ly91@naver.com','resian','ly91', '123');
-INSERT INTO USER (id, email, name, user_id, password) VALUES (2, 'dwd@naver.com','javajigi','a', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (2, '1@naver.com','javajigi','a', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (3, '2@naver.com','a','b', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (4, '3@naver.com','b','c', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (5, '4@naver.com','c','d', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (6, '5@naver.com','d','e', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (7, '6@naver.com','e','f', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (8, '6@naver.com','e','g', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (9, '6@naver.com','e','h', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (10, '6@naver.com','e','i', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (11, '6@naver.com','e','j', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (12, '6@naver.com','e','k', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (13, '6@naver.com','e','l', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (14, '6@naver.com','e','n', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (15, '6@naver.com','e','m', '1');
+INSERT INTO USER (id, email, name, user_id, password) VALUES (16, '6@naver.com','e','o', '1');

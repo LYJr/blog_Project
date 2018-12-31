@@ -1,4 +1,4 @@
-package category.login;
+package category.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

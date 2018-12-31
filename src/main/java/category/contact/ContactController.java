@@ -1,7 +1,7 @@
 package category.contact;
 
 import category.security.HttpSessionUtils;
-import category.login.User;
+import category.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

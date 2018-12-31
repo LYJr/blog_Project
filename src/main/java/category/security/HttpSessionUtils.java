@@ -1,6 +1,6 @@
 package category.security;
 
-import category.login.User;
+import category.user.User;
 import javax.servlet.http.HttpSession;
 
 public class HttpSessionUtils {

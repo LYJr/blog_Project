@@ -63,12 +63,26 @@
                 </div>
 
                 <div class="pagination">
+                    {{#userListPage}}
                     <ul class="flex align-items-center">
+                        {{#getNoPreviousPage}}
                         <li class="active">
-                            <a href="#">01.</a></li>
-                        <li><a href="#">02.</a></li>
-                        <li><a href="#">03.</a></li>
+                            <a href="?page={{getNoPreviousPage}}" aria-label="Previous">
+                                <span aria-hidden="true">«</span>
+                            </a></li>
+                        {{/getNoPreviousPage}}
+
+                        {{#paging}}
+                        <li><a href="?page={{this}}">{{this}}</a></li>
+                        {{/paging}}
+
+                        {{#getNoNextPage}}
+                        <li><a href="?page={{getNoNextPage}}" aria-label="Next">
+                            <span aria-hidden="true">»</span>
+                        </a></li>
+                        {{/getNoNextPage}}
                     </ul>
+                    {{/userListPage}}
                 </div>
             </div><!-- .content-wrap -->
         </div><!-- .col -->
