@@ -1,11 +1,14 @@
 package category.service;
 
-import category.login.UserRepository;
-import category.login.User;
+import category.user.UserRepository;
+import category.user.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Optional;
 
 @Service("UserService")
 public class UserService {
@@ -21,6 +24,10 @@ public class UserService {
 
     public User add(User user) {
         return userRepository.save(user);
+    }
+
+    public Page<User> findAllPage(Optional<Integer> page, Pageable pageable) {
+        return userRepository.findByPage(pageable);
     }
 
     public List<User> findAll() {
@@ -39,6 +46,7 @@ public class UserService {
         String master = "ly91";
         return userRepository.findByUserId(master).orElseThrow(NullPointerException::new);
     }
+
 }
 
 
