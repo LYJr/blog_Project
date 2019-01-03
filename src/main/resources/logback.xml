@@ -10,10 +10,10 @@
     <!-- 자바 패키지별 log level을 설정한다. -->
     <logger name="core" level="DEBUG" />
 
-    <logger name="next" level="DEBUG" />
+    <logger name="category" level="DEBUG" />
 
     <!-- 기본 log level을 설정한다. -->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

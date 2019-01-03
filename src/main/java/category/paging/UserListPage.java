@@ -58,4 +58,5 @@ public class UserListPage {
         return getBlackLast()+1;
     }
 
+
 }

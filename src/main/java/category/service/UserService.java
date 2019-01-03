@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
-@Service("UserService")
+@Service("userService")
 public class UserService {
 
     @Resource(name = "userRepository")
@@ -26,18 +26,17 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public Page<User> findAllPage(Optional<Integer> page, Pageable pageable) {
-        return userRepository.findByPage(pageable);
-    }
-
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    public Page<User> findAllPage(Pageable pageable) {
+        return userRepository.findAll(pageable);
     }
 
     public User findById(String userId) {
         return userRepository.findByUserId(userId).orElse(null);
     }
-
     //Iterable과 List로 구현하는 차이  => JPA레파지토리 사용시 List로 반환 가능
     //Iterable => Crud레파지토리 사용시 리턴 값으로 적용 됨
     //JPA 레파지토리 + Crud 레파지토리의 차이

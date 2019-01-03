@@ -46,7 +46,8 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public String UserList(Model model, HttpSession session, Pageable pageable) {
+    public String UserList(Model model, HttpSession session, Optional<Integer> page,
+                           @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC, size = 2) Pageable pageable) {
         User user = HttpSessionUtils.getUserFromSession(session);
         User master = userService.masterUser();
 
@@ -58,21 +59,13 @@ public class UserController {
 
         List<User> users = userService.findAll();
         log.debug("user size : {}", users.size());
-//        model.addAttribute("list", userService.findAllPage(pageable));
 
-        return "redirect:/users/list/page";
-    }
-
-    @GetMapping("/list/page")
-    public String userListPaging(Model model, Optional<Integer> page,
-                                 @PageableDefault(sort = {"id"}, direction = Sort.Direction.ASC, size = 2) Pageable pageable){
-
-        Page<User> presentPage = userService.findAllPage(page, pageable);
+        Page<User> presentPage = userService.findAllPage(pageable);
         model.addAttribute("user", page);
         model.addAttribute("userListPage", UserListPage.of(presentPage));
+        log.debug("UserListPage.of : {}", UserListPage.of(presentPage));
+        model.addAttribute("list", userService.findAllPage(pageable));
 
-       return "/category/user-list";
+        return "/category/user-list";
     }
-
-
 }
