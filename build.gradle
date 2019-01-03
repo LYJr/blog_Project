@@ -15,8 +15,6 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-
-
 version = '1.0.0'
 sourceCompatibility = 1.8
 
